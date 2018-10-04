@@ -6,7 +6,7 @@ const Airplanes = (props) => (
   <div className="AirplanesContainer">
     <h1>Airplanes</h1>
     <div className="AirplanesFlexBox">
-    {props.airplanes.map(airplane => <AirplaneCard airplane={airplane} /> )}
+    {props.airplanes.map(airplane => <AirplaneCard airplane={airplane} key={airplane.id}/> )}
     </div>
   </div>
 );

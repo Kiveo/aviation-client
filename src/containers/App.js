@@ -16,6 +16,13 @@ const airplanes = [
     img_url: "https://www.libertyjet.com/img/aircraft/Gulfstream-G500-ext.jpg",
     lesson_rate: 28760,
     identifier: "N-BETA2"
+  },
+  {
+    name: 'Cessna 172',
+    seats: 4,
+    img_url: 'http://ichef.bbci.co.uk/wwfeatures/wm/live/624_351/images/live/p0/4v/kd/p04vkddn.jpg',
+    lesson_rate: 175,
+    identifier: "N17201"
   }
 ]
 

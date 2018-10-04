@@ -31,15 +31,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      airplanes: []
+      airplanes: [],
+      loading: true
     }
 
   }
-  // once mounted, fetch from API via lifecycle method
+  // once mounted, fetch from API via lifecycle method: AFTER initial render
   componentDidMount() {
     fetch('http://localhost:3001/api/airplanes')
       .then(response => response.json() )
-      .then(airplanes => this.setState({ airplanes }) )
+      .then(airplanes => this.setState({ airplanes, loading: false }) )
     }
     
   render() {
@@ -48,7 +49,11 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to Aviation Client</h1>
         </header>
+        {this.state.loading ? 
+          <h1>Loading...</h1> :
+
         <Airplanes airplanes={this.state.airplanes} />
+        }
       </div>
     );
   }

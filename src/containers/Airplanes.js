@@ -6,7 +6,7 @@ const Airplanes = (props) => (
     <h1>Airplanes</h1>
     <div className="AirplanesFlexBox">
     {props.airplanes.map(airplane => 
-      <div className="AirplaneCard">
+      <div className="AirplaneCard" key={airplane.id}>
         <h3>{airplane.name}</h3>
         <p>Seats: {airplane.seats}</p>
         <img className="AirplaneImg" src={airplane.img_url} alt={'Image of ' + airplane.name}/>

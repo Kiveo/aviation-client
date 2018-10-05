@@ -8,8 +8,9 @@ import './Airplanes.css';
 
 class Airplanes extends Component {
 
-  // componentDidMount() {
-  // }
+  componentDidMount() {
+    
+  }
 
   render() {
     return(

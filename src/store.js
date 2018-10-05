@@ -2,10 +2,12 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
 import airplanes from './reducers/airplanes';
+import airplaneFormData from './reducers/airplaneFormData';
 
 // utlize combine reducers && middleware for async
 const reducers = combineReducers({
-  airplanes: airplanes
+  airplanes: airplanes,
+  airplaneFormData
 });
 
 const middleware = [thunk]

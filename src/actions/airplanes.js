@@ -1,6 +1,6 @@
 const API_URL = process.env.REACT_APP_API_URL
 
-// action creators
+// action creator
 const setAirplanes = airplanes => {
   return {
     type: 'GET_AIRPLANES_SUCCESS',

@@ -24,7 +24,14 @@
 
 .AirplaneForm {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
   margin: 2%;
+}
+
+.AirplaneFormInput {
+  text-align: center;
+  width: 25%;
+  align-self: center;
+  padding: 1%;
+  margin: 1em;
 }

@@ -21,3 +21,10 @@
 .AirplaneImg {
   width: 60%;
 }
+
+.AirplaneForm {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 2%;
+}

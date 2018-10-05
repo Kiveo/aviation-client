@@ -4,7 +4,7 @@ const API_URL = process.env.REACT_APP_API_URL
 const setAirplanes = airplanes => {
   return {
     type: 'GET_AIRPLANES_SUCCESS',
-    airplanes 
+    airplanes
   }
 }
 
@@ -13,10 +13,7 @@ export const getAirplanes = () => {
   return dispatch => {
     return fetch(`${API_URL}/airplanes`)
     .then(response => response.json() )
-    .then(airplanes => dispatch(setAirplanes) )
+    .then(airplanes => dispatch(setAirplanes(airplanes) ) )
     .catch(error => console.log(error));
   }
 }
-
-
-// export default getAirplanes;

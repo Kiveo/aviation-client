@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import './Airplanes.css';
+import { connect } from 'react-redux';
+
 import AirplaneCard from '../components/AirplaneCard';
 import AirplaneForm from './AirplaneForm';
+import './Airplanes.css';
 
 class Airplanes extends Component {
   // constructor(props) {
@@ -25,4 +27,10 @@ class Airplanes extends Component {
   }
 }
 
-export default Airplanes;
+const mapStateToProps = () => {
+  return({
+    airplanes: state.airplanes
+  })
+}
+
+export default connect(mapStateToProps)(Airplanes);

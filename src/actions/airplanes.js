@@ -1,7 +1,7 @@
 const API_URL = process.env.REACT_APP_API_URL
 
 // action creators
-const setAirplanes = (airplanes) => {
+const setAirplanes = airplanes => {
   return {
     type: 'GET_AIRPLANES_SUCCESS',
     airplanes 
@@ -9,14 +9,14 @@ const setAirplanes = (airplanes) => {
 }
 
 // async action
-const getAirplanes = () => (
-  dispatch => {
+export const getAirplanes = () => {
+  return dispatch => {
     return fetch(`${API_URL}/airplanes`)
     .then(response => response.json() )
     .then(airplanes => dispatch(setAirplanes) )
     .catch(error => console.log(error));
   }
-)
+}
 
 
-export default getAirplanes;
+// export default getAirplanes;

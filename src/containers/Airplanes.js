@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 
 import AirplaneCard from '../components/AirplaneCard';
 import AirplaneForm from './AirplaneForm';
-import getAirplanes from '../actions/airplanes';
+import { getAirplanes } from '../actions/airplanes';
 import './Airplanes.css';
 
 class Airplanes extends Component {
 
   componentDidMount() {
-    
+    this.props.getAirplanes()
   }
 
   render() {

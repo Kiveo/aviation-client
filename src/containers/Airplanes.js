@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import AirplaneCard from '../components/AirplaneCard';
 import AirplaneForm from './AirplaneForm';
+import getAirplanes from '../actions/airplanes';
 import './Airplanes.css';
 
 class Airplanes extends Component {
@@ -29,4 +30,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps)(Airplanes);
+export default connect(mapStateToProps, {getAirplanes})(Airplanes);

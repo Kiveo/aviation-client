@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
-import airplanesReducer from './reducers/airplanesReducer';
+import airplanes from './reducers/airplanes';
 
 // utlize combine reducers && middleware for async
 const reducers = combineReducers({
-  airplanes: airplanesReducer
+  airplanes: airplanes
 });
 
 const middleware = [thunk]

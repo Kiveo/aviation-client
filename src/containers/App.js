@@ -6,7 +6,6 @@ const API_URL = process.env.REACT_APP_API_URL
 
 class App extends Component {
 
-  }
   // once mounted, fetch from API via lifecycle method: AFTER initial render
   componentDidMount() {
     fetch(`${API_URL}/airplanes`)
@@ -20,7 +19,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Welcome to Aviation Client</h1>
         </header>
-        {this.state.loading ? <h1>...Loading...</h1> : <Airplanes /> }
+        {/* {this.state.loading ? <h1>...Loading...</h1> : <Airplanes /> } */}
+        <Airplanes />
       </div>
     );
   }

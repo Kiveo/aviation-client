@@ -1,15 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
-const airplanesReducer = (state = [], action ) => {
-  switch(action.type) {
-    case 'GET_AIRPLANES_SUCCESS':
-      return action.airplanes;
-
-    default: 
-      return state; 
-  }
-}
+import airplanesReducer from './reducers/airplanesReducer';
 
 // utlize combine reducers && middleware for async
 const reducers = combineReducers({

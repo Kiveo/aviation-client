@@ -6,12 +6,8 @@ import AirplaneForm from './AirplaneForm';
 import './Airplanes.css';
 
 class Airplanes extends Component {
-  // constructor(props) {
-  //   super(props);
 
-  //   this.state = {
-  //     name: ''
-  //   }
+  // componentDidMount() {
   // }
 
   render() {
@@ -27,7 +23,7 @@ class Airplanes extends Component {
   }
 }
 
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
   return({
     airplanes: state.airplanes
   })

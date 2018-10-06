@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import AirplaneFormData from '../reducers/airplaneFormData';
+import airplaneFormData from '../reducers/airplaneFormData';
 import updateAirplaneFormData from '../actions/airplaneForm';
 
 class AirplaneForm extends Component {
@@ -44,4 +44,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(AirplaneForm);
+export default connect(mapStateToProps, { updateAirplaneFormData })(AirplaneForm);

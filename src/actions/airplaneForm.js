@@ -1,11 +1,9 @@
 import airplaneFormData from "../reducers/airplaneFormData";
 
 // Action Creator
-const updateAirplaneFormData = (airplaneFormData) => {
+export const updateAirplaneFormData = airplaneFormData => {
   return {
     type: 'UPDATED_DATA',
     airplaneFormData
   }
 }
-
-export default updateAirplaneFormData;

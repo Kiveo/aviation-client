@@ -1,3 +1,5 @@
+import { resetAirplaneForm } from './airplaneForm';
+
 const API_URL = process.env.REACT_APP_API_URL
 
 // action creator
@@ -36,7 +38,10 @@ export const createAirplane = (airplane) => {
       body: JSON.stringify({airplane: airplane})
     })
     .then(response => response.json() )
-    .then(airplane => dispatch(addAirplane(airplane)) )
+    .then(airplane => {
+      dispatch(addAirplane(airplane)) 
+      dispatch(resetAirplaneForm())
+    })
     .catch(error => console.log(error) )
   }
 }

@@ -6,4 +6,10 @@ const updateAirplaneFormData = airplaneFormData => {
   }
 }
 
+export const resetAirplaneForm = () => {
+  return {
+    type: 'RESET_AIRPLANE_FORM',
+  }
+}
+
 export default updateAirplaneFormData;

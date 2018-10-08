@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import airplaneFormData from '../reducers/airplaneFormData';
+// import airplaneFormData from '../reducers/airplaneFormData';
 import updateAirplaneFormData from '../actions/airplaneForm';
 
 class AirplaneForm extends Component {
@@ -9,7 +9,7 @@ class AirplaneForm extends Component {
   handleonChange = (event) => {
    const {name, value} = event.target;
    let currentAirplaneFormData = Object.assign({}, this.props.airplaneFormData, {
-     [name]: value,
+     [name]: value
    })
 
    this.props.updateAirplaneFormData(currentAirplaneFormData);
@@ -44,4 +44,5 @@ const mapStateToProps = (state) => {
   }
 }
 
+// export default connect(mapStateToProps, { updateAirplaneFormData })(AirplaneForm);
 export default connect(mapStateToProps, { updateAirplaneFormData })(AirplaneForm);

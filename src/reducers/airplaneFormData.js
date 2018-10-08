@@ -1,11 +1,11 @@
-// syntax: export default () => {}
-export default (state = {
+const airplaneFormData = (state = {
   name: '',
   seats: 0,
   img_url: '',
   lesson_rate: 0,
   identifier: ''
 }, action) => {
+  
   switch(action.type) {
     case 'UPDATED_DATA':
       return action.airplaneFormData;
@@ -14,3 +14,7 @@ export default (state = {
       return state; 
   }
 } 
+
+export default airplaneFormData
+
+// note: syntax optional for export default vs export default airplaneFormData

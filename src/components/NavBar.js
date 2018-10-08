@@ -8,10 +8,12 @@ import {
 import Airplanes from '../containers/Airplanes';
 import About from './About';
 
+import './NavBar.css';
+
 const Home = () => (
   <div>
   <header className="App-header">
-    <h1 className="App-title">Welcome to Aviation Client</h1>
+    <h1 className="App-title">Aviation Client</h1>
   </header>
   <Airplanes />
   </div>
@@ -53,8 +55,8 @@ const Topics = ({ match }) => (
 
 const NavBar = () => (
   <Router>
-    <div id="navBar">
-      <nav>
+    <div>
+      <nav id="NavBar">
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>

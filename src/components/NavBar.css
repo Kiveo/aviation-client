@@ -1,0 +1,21 @@
+#NavBar {
+  font-weight: bold;
+}
+
+#NavBar ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: center;
+}
+
+#NavBar li {
+  flex: 1;
+}
+
+#NavBar a, a:visited {
+  /* display: inline-flex; */
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}

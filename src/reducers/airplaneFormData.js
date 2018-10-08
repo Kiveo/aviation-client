@@ -16,5 +16,3 @@ const airplaneFormData = (state = {
 } 
 
 export default airplaneFormData
-
-// note: syntax optional for export default vs export default airplaneFormData

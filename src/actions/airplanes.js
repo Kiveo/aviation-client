@@ -8,12 +8,35 @@ const setAirplanes = airplanes => {
   }
 }
 
-// async action
+const addAirplane = airplane => {
+  return {
+    type: 'CREATE_AIRPLANE',
+    airplane
+  }
+}
+
+// async actions
 export const getAirplanes = () => {
   return dispatch => {
     return fetch(`${API_URL}/airplanes`)
     .then(response => response.json() )
     .then(airplanes => dispatch(setAirplanes(airplanes) ) )
     .catch(error => console.log(error));
+  }
+}
+
+export const createAirplane = (airplane) => {
+  return dispatch => {
+    return fetch(`${API_URL}/airplanes`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // API uses strong parameters airplane: airplaneParams expected
+      body: JSON.stringify({airplane: airplane})
+    })
+    .then(response => response.json() )
+    .then(airplane => dispatch(addAirplane(airplane)) )
+    .catch(error => console.log(error) )
   }
 }

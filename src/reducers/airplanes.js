@@ -3,6 +3,9 @@ const airplanesReducer = (state = [], action ) => {
     case 'GET_AIRPLANES_SUCCESS':
       return action.airplanes;
 
+    case 'CREATE_AIRPLANE':
+      return state.concat(action.airplane);
+
     default: 
       return state; 
   }

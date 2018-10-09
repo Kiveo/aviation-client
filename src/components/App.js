@@ -5,19 +5,10 @@ import {
   Link
 } from 'react-router-dom'
 
-import {NavBar} from './NavBar';
+import {HeadNav} from './HeadNav';
 import {Home} from './Home';
 import {BottomBanner} from './BottomBanner';
 import './App.css';
-
-const Header = () => {
-  return (
-    <header className="App-header">
-      <h1 className="App-title">Welcome to Aviation Client</h1>
-    </header>
-  )
-}
-
 
 const About = () => {
   return (
@@ -27,20 +18,11 @@ const About = () => {
   )
 }
 
-// const App = () => {
-//   return (
-//     <Router>
-//       <Route exact path="/" component={Home}/>
-//     </Router>
-//   )
-// }
-
 const App = (props) => {
   return (
     <Router>
       <div className="app">
-        <Header />
-        <NavBar />
+        <HeadNav />
         <Route exact path="/" component={Home} />
         <Route exact path="/actors" component={About} />
 

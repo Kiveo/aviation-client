@@ -2,31 +2,20 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom'
 
-import {HeadNav} from './HeadNav';
-import {Home} from './Home';
-import {BottomBanner} from './BottomBanner';
+import { HeadNav } from './HeadNav';
+import { Home } from './Home';
+import { About } from './About';
 import './App.css';
-
-const About = () => {
-  return (
-    <div>
-      ABOUT
-    </div>
-  )
-}
 
 const App = (props) => {
   return (
     <Router>
-      <div className="app">
+      <div className="App">
         <HeadNav />
         <Route exact path="/" component={Home} />
-        <Route exact path="/actors" component={About} />
-
-        <BottomBanner />
+        <Route exact path="/about" component={About} />
       </div>
     </Router>
   );

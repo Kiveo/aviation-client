@@ -1,10 +1,40 @@
+/************* HTML ELEMENTS ************/
 * {
   margin: 0;
   padding: 0;
 }
 
+H1, h2 {
+  margin: 0.5em;
+}
+p {
+  padding: 0.5em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px 0;
+}
+
+/* ******* CUSTOM ELEMENTS ********* */
+.listContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardList {
+  min-width: 250px;
+}
+
+/*************************** App Labeled Classes ****************************/
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-header {
@@ -24,6 +54,8 @@
 }
 
 .App-footer {
+  margin-top: 2em;
+  height: 2em;
   text-align: center;
   width: 100%;
   color: white;
@@ -33,6 +65,7 @@
   letter-spacing: 0.1em;
 }
 
+/* *************NAVIGATION*************** */
 .NavBar {
   width: 100%;
   height: 1.5em;
@@ -44,7 +77,6 @@
 }
 
 .NavBar a, a:visited {
-  
   color: white;
   text-decoration: none;
   margin: 0 1em;

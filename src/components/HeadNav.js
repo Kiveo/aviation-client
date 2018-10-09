@@ -7,7 +7,7 @@ export const HeadNav = () => {
       <h1 className="App-title">Welcome to Aviation Client</h1>
       <div className="NavBar">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/actors">About</NavLink>
+        <NavLink to="/about">About</NavLink>
       </div>
     </header>
   );

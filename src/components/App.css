@@ -1,15 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
   background-color: #6DC2C5;
-  height: 150px;
-  padding: 20px;
+  min-height: 150px;
+  margin-bottom: 1em;
+  padding-top: 1em;
   color: white;
   font-size: 2em;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.App-footer {
+  width: 100%;
+  color: white;
+  background-color: #399;
+  font-weight: bold;
+  padding: 0.5em;
+  letter-spacing: 0.1em;
 }

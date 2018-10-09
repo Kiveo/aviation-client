@@ -5,7 +5,8 @@ import {
   Link
 } from 'react-router-dom'
 
-import Airplanes from '../containers/Airplanes';
+import {NavBar} from './NavBar';
+import {Home} from './Home';
 import {BottomBanner} from './BottomBanner';
 import './App.css';
 
@@ -17,22 +18,36 @@ const Header = () => {
   )
 }
 
-const Home = () => {
-    return (
-      <div className="App">
-        <Header />
-        <Airplanes />
-        <BottomBanner />
-      </div>
-    );
-  }
 
-const App = () => {
+const About = () => {
   return (
-    <Router>
-      <Route exact path="/" component={Home}/>
-    </Router>
+    <div>
+      ABOUT
+    </div>
   )
 }
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Route exact path="/" component={Home}/>
+//     </Router>
+//   )
+// }
+
+const App = (props) => {
+  return (
+    <Router>
+      <div className="app">
+        <Header />
+        <NavBar />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/actors" component={About} />
+
+        <BottomBanner />
+      </div>
+    </Router>
+  );
+};
 
 export default App;

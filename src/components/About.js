@@ -4,13 +4,13 @@ import { BottomBanner } from './BottomBanner';
 export const About = () => (
   <div>
     <h1>About Aviation Client</h1>
-    <p>Hello World, and welcome to the Aviation Client app.</p>
-    <p>This app is designed to provide a template like structure to various aviation web applications.</p>
+    <p>Hello World! Welcome to the Aviation Client app.</p>
+    <p>This app is designed to provide a template-like structure to various aviation web applications.</p>
     <p>Let's list a few examples which, with minor modification, this app could be applied toward.</p>
     
     <div className="listContainer">
 
-    <div class="cardList">
+    <div className="listCard">
       <h2>Comparative Pricing Analytics</h2>
       <ul>
         <li>Training Costs</li>
@@ -20,7 +20,7 @@ export const About = () => (
       </ul>
     </div>
 
-    <div class="cardList">
+    <div className="listCard">
       <h2>Advertisement and Assessment</h2>
       <ul>
         <li>School Fleet Display</li>
@@ -33,7 +33,7 @@ export const About = () => (
       </ul>
     </div>
 
-    <div class="cardList">
+    <div className="listCard">
       <h2>Management and Recordkeeping</h2>
       <ul>
         <li>Aviation Fleet Inventory</li>

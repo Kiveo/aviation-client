@@ -1,5 +1,4 @@
 import React from 'react';
-import { BottomBanner } from './BottomBanner';
 
 export const About = () => (
   <div>
@@ -44,7 +43,6 @@ export const About = () => (
     </div>
 
     </div>
-    <BottomBanner />
     
   </div>
 )

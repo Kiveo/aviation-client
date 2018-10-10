@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { BottomBanner } from './BottomBanner';
+import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -9,10 +8,10 @@ export const Home = () => {
       <div className="heroImage">
         <span className="heroText">
           <h1>Welcome to Aviation Client</h1>
-          <p>template web app for aviation developers</p>
+          <p>-template web app for aviation developers-</p>
+          <p><NavLink to="/airplanes">Enter</NavLink></p>
         </span>
       </div>
-      <BottomBanner />
     </div>
   )
 }

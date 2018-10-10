@@ -21,5 +21,3 @@ const airplaneFormData = (state = initialState, action) => {
 } 
 
 export default airplaneFormData
-
-// note: syntax optional for export default vs export default airplaneFormData

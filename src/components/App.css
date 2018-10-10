@@ -11,9 +11,9 @@ body {
   background-color: #123;
 }
 
-/* header {
-  margin-top: 5vh;
-} */
+header {
+  padding: 10px 0;
+}
 
 H1, h2 {
   margin: 1em 0.5em 0.5em 0.5em;
@@ -69,7 +69,8 @@ li {
 }
 
 .App-content {
-  background-color: orange;
+  background-color: whitesmoke;
+  min-height: 50vh;
   /* padding-bottom: 5em; */
 }
 

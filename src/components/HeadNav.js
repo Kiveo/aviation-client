@@ -8,6 +8,7 @@ export const HeadNav = () => {
       <div className="NavBar">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
+        <NavLink to="/new">Add To Listings</NavLink>
       </div>
     </header>
   );

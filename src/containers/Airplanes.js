@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import AirplaneCard from '../components/AirplaneCard';
-import AirplaneForm from './AirplaneForm';
 import { getAirplanes } from '../actions/airplanes';
 import './Airplanes.css';
 
@@ -15,11 +14,10 @@ class Airplanes extends Component {
   render() {
     return(
       <div className="AirplanesContainer">
-        <h1>Airplanes</h1>
+        <h1>Airplane Listings</h1>
         <div className="AirplanesFlexBox">
         {this.props.airplanes.map(airplane => <AirplaneCard airplane={airplane} key={airplane.id}/> )}
         </div>
-        <AirplaneForm />
       </div>
     )
   }

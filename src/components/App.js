@@ -7,17 +7,21 @@ import {
 import { HeadNav } from './HeadNav';
 import { Home } from './Home';
 import { About } from './About';
+import AirplaneForm from '../containers/AirplaneForm';
 import './App.css';
 
 const App = (props) => {
   return (
-    <Router>
-      <div className="App">
-        <HeadNav />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-      </div>
-    </Router>
+    <div className="App">
+      <Router>  
+        <React.Fragment>
+          <HeadNav />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/new" component={AirplaneForm} />
+        </React.Fragment>
+      </Router>
+    </div>
   );
 };
 

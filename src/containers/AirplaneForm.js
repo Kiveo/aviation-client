@@ -24,7 +24,7 @@ class AirplaneForm extends Component {
 
     return(
       <form className="AirplaneForm" onSubmit={this.handleOnSubmit}>
-        <p>Add your favorite aircraft!</p>
+        <h2>Add Aircraft Rental/Listing Details</h2>
         <label>Make/Model</label>
         <input type="text" name="name" value={name} className="AirplaneFormInput" onChange={this.handleOnChange}/> 
         <label>Seats</label>

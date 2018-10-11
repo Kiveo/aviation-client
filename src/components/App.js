@@ -11,7 +11,7 @@ import { BottomBanner } from './BottomBanner';
 import AirplaneForm from '../containers/AirplaneForm';
 import Airplanes from '../containers/Airplanes';
 // import Airplane from '../containers/Airplane';
-import SampleAirplane from '../containers/SampleAirplane';
+import Airplane from '../containers/Airplane';
 
 import './App.css';
 
@@ -24,7 +24,7 @@ const App = (props) => {
             <HeadNav />
             <Route exact path="/" component={Home} />
             <Route exact path='/airplanes' component={Airplanes} />
-            <Route path='/airplanes/:airplane_id' component={SampleAirplane} />
+            <Route path='/airplanes/:airplane_id' component={Airplane} />
             <Route exact path="/about" component={About} />
             <Route exact path="/new" component={AirplaneForm} />
 

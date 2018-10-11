@@ -52,3 +52,17 @@
   min-width: 100px;
   border-radius: 10px;
 }
+
+.AirplaneLink, .AirplaneLink:visited {
+  width: 100%;
+  padding: 1em 0;
+  display: inline-block;
+  color: white;
+  background-color: #112233;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+.AirplaneLink:hover {
+  background-color: rgba(250,250,250,0.2);
+}

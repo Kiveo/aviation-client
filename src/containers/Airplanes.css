@@ -41,3 +41,14 @@
   padding: 1.5em;
   margin: 1em;
 }
+
+.AirplaneDelete {
+  font-weight: bold;
+  background-color: darkslategrey;
+  /* font-size: 1em; */
+  padding: 0.5em 1em;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  min-width: 100px;
+  border-radius: 10px;
+}

@@ -17,6 +17,13 @@ const addAirplane = airplane => {
   }
 }
 
+const removeAirplane = airplane => {
+  return {
+    type: 'REMOVE_AIRPLANE',
+    airplane
+  }
+}
+
 // async actions
 export const getAirplanes = () => {
   return dispatch => {
@@ -41,6 +48,21 @@ export const createAirplane = (airplane) => {
     .then(airplane => {
       dispatch(addAirplane(airplane)) 
       dispatch(resetAirplaneForm())
+    })
+    .catch(error => console.log(error) )
+  }
+}
+
+export const deleteAirplane = (airplane) => {
+  return dispatch => {
+    return fetch(`${API_URL}/airplanes/${airplane.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(airplane => {
+      dispatch(removeAirplane(airplane) )
     })
     .catch(error => console.log(error) )
   }

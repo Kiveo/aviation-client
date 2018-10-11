@@ -9,6 +9,12 @@ const airplanesReducer = (state = [], action ) => {
     case 'RESET_AIRPLANE_FORM':
       return state;
 
+    case 'REMOVE_AIRPLANE':
+      let newAirplanes = this.state.airplanes.filter(airplane => {
+        return airplane.id !== action.airplane.id
+      })
+      return {...state, airplanes: newAirplanes}
+      
     default: 
       return state; 
   }

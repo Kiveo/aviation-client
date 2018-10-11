@@ -1,12 +1,14 @@
 import React from 'react';
+// import { deleteAirplane } from '../actions/airplanes';
 
-const AirplaneCard = ({airplane}) => (
-  <div className="AirplaneCard" key={airplane.id}>
-    <h3>{airplane.name}</h3>
-    <p>Seats: {airplane.seats}</p>
-    <img className="AirplaneImg" src={airplane.img_url} alt={'Image of ' + airplane.name}/>
-    <p>FAA Identifier: {airplane.identifier}</p>
-    <p>Hourly Rate: ${airplane.lesson_rate}</p>
+const AirplaneCard = (props) => (
+  <div className="AirplaneCard">
+    <h3>{props.airplane.name}</h3>
+    <p>Seats: {props.airplane.seats}</p>
+    <img className="AirplaneImg" src={props.airplane.img_url} alt={'Image of ' + props.airplane.name}/>
+    <p>FAA Identifier: {props.airplane.identifier}</p>
+    <p>Hourly Rate: ${props.airplane.lesson_rate}</p>
+    <button className="AirplaneDelete" onClick={() => props.delete(props.airplane)}>Delete</button>
   </div>
 );
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import AirplaneCard from '../components/AirplaneCard';
-import { getAirplanes } from '../actions/airplanes';
+import { getAirplanes, deleteAirplane } from '../actions/airplanes';
 
 import './Airplanes.css';
 
@@ -17,7 +17,7 @@ class Airplanes extends Component {
       <div className="AirplanesContainer">
         <h1>Airplane Listings</h1>
         <div className="AirplanesFlexBox">
-        {this.props.airplanes.map(airplane => <AirplaneCard airplane={airplane} key={airplane.id}/> )}
+          {this.props.airplanes.map(airplane => <AirplaneCard airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane}/> )}
         </div>
       </div>
     )
@@ -30,4 +30,12 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, {getAirplanes})(Airplanes);
+const mapDispatchToProps = dispatch => {
+  return ({
+    deleteAirplane: (airplane) => {dispatch(deleteAirplane(airplane) )},
+    getAirplanes: () => {dispatch(getAirplanes() )}
+  })
+}
+
+// concat?
+export default connect(mapStateToProps, mapDispatchToProps)(Airplanes);

@@ -1,6 +1,15 @@
-import { resetAirplaneForm } from './airplaneForm';
+import { resetAirplaneForm, setRequestFlagColor } from './airplaneForm';
 
 const API_URL = process.env.REACT_APP_API_URL
+
+// Error handler for fetch calls
+const handleErrors = (response) => {
+  if (!response.ok) {
+    console.log("Error encountered with Response...")
+    setRequestFlagColor("orange")
+  }
+  return response;
+}
 
 // action creator
 const setAirplanes = airplanes => {
@@ -44,12 +53,15 @@ export const createAirplane = (airplane) => {
       // API uses strong parameters airplane: airplaneParams expected
       body: JSON.stringify({airplane: airplane})
     })
+    .then(handleErrors)
     .then(response => response.json() )
     .then(airplane => {
-      dispatch(addAirplane(airplane)) 
-      dispatch(resetAirplaneForm())
+      dispatch(addAirplane(airplane))
+      dispatch(resetAirplaneForm() ) 
     })
-    .catch(error => console.log(error) )
+    .catch(error => {
+      console.log(error)
+    } )
   }
 }
 

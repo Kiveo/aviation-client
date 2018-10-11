@@ -1,5 +1,5 @@
 // Action Creator
-const updateAirplaneFormData = airplaneFormData => {
+export const updateAirplaneFormData = airplaneFormData => {
   return {
     type: 'UPDATED_DATA', 
     airplaneFormData
@@ -12,4 +12,10 @@ export const resetAirplaneForm = () => {
   }
 }
 
-export default updateAirplaneFormData;
+export const setRequestFlagColor = (color) => {
+  return {
+    type: 'SET_FLAG_COLOR',
+    flag: color
+  }
+}
+

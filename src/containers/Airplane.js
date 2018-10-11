@@ -10,12 +10,13 @@ class Airplane extends Component {
   
   render() {
     let airplane_id = this.props.match.params.airplane_id;
-    console.log(this.props.airplane)
     let airplane = this.props.airplane
     const conditionalRender = () => {
       if (airplane) {
         // return card after props mount (async is post initial component mount)
         return <AirplaneCard airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane}/>
+      } else {
+        return (<div className="AirplaneCard"><p>Sorry, that aircraft was not found.</p></div>)
       }
     }
 

@@ -3,7 +3,9 @@ const initialState = {
   seats: 0,
   img_url: '',
   lesson_rate: 0,
-  identifier: ''
+  identifier: '',
+
+  flag: "green",
 }
 
 const airplaneFormData = (state = initialState, action) => {
@@ -13,7 +15,10 @@ const airplaneFormData = (state = initialState, action) => {
       return action.airplaneFormData;
 
     case 'RESET_AIRPLANE_FORM':
-      return initialState;
+      return {...initialState, flag: "red"}
+    
+    case 'SET_FLAG_COLOR':
+      return {...initialState, flag: "orange"}
       
     default: 
       return state; 

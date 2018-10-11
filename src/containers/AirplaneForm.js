@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import updateAirplaneFormData from '../actions/airplaneForm';
+import {updateAirplaneFormData} from '../actions/airplaneForm';
 import { createAirplane } from '../actions/airplanes';
 
 class AirplaneForm extends Component {
@@ -13,10 +13,13 @@ class AirplaneForm extends Component {
    })
    this.props.updateAirplaneFormData(currentAirplaneFormData);
   }
-
+  
   handleOnSubmit = (event) => {
     event.preventDefault();
     this.props.createAirplane(this.props.airplaneFormData);
+    if (this.props.airplaneFormData.flag === "green") {
+      this.props.history.push('/airplanes');
+    }
   }
   
   render() {
@@ -37,6 +40,8 @@ class AirplaneForm extends Component {
         <input type="text" name="identifier" value={identifier} className="AirplaneFormInput"  onChange={this.handleOnChange}/>
 
         <input type="submit" className="AirplaneFormInput"/>
+        <p>AIRCRAFT ADDED STATUS: {this.props.airplaneFormData.loaded}</p>
+
       </form>
     );
   }

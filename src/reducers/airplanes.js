@@ -6,9 +6,6 @@ const airplanesReducer = (state = [], action ) => {
     case 'CREATE_AIRPLANE':
       return state.concat(action.airplane);
 
-    case 'RESET_AIRPLANE_FORM':
-      return state;
-
     case 'REMOVE_AIRPLANE':
       let airplanes = state.filter(airplane => {
         return airplane.id !== action.airplane.id

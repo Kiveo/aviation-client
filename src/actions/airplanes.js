@@ -61,9 +61,8 @@ export const deleteAirplane = (airplane) => {
         'Content-Type': 'application/json'
       },
     })
-    .then(airplane => {
-      dispatch(removeAirplane(airplane) )
-    })
+    .then(dispatch(removeAirplane(airplane) )
+    )
     .catch(error => console.log(error) )
   }
 }

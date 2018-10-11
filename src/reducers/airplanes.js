@@ -10,10 +10,10 @@ const airplanesReducer = (state = [], action ) => {
       return state;
 
     case 'REMOVE_AIRPLANE':
-      let newAirplanes = this.state.airplanes.filter(airplane => {
+      let airplanes = state.filter(airplane => {
         return airplane.id !== action.airplane.id
       })
-      return {...state, airplanes: newAirplanes}
+      return airplanes;
       
     default: 
       return state; 

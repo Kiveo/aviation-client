@@ -17,9 +17,7 @@ class AirplaneForm extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault();
     this.props.createAirplane(this.props.airplaneFormData);
-    if (this.props.airplaneFormData.flag === "green") {
-      this.props.history.push('/airplanes');
-    }
+    this.props.history.push('/airplanes');
   }
   
   render() {

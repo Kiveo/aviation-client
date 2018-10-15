@@ -15,7 +15,7 @@ const airplaneFormData = (state = initialState, action) => {
       return action.airplaneFormData;
 
     case 'RESET_AIRPLANE_FORM':
-      return {...initialState, flag: "red"}
+      return initialState;
     
     case 'SET_FLAG_COLOR':
       return {...initialState, flag: "orange"}

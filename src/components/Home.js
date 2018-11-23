@@ -8,8 +8,7 @@ export const Home = () => {
       <div className="heroImage">
         <span className="heroText">
           <h1>Welcome to Aviation Client</h1>
-          <p>-template web app for aviation developers-</p>
-          <p><NavLink to="/airplanes">Enter</NavLink></p>
+          <p><NavLink to="/airplanes" className="heroEnter">Enter</NavLink></p>
         </span>
       </div>
     </div>

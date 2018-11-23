@@ -1,5 +1,6 @@
 /* *********IMPORTS********* */
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 /************* HTML ELEMENTS ************/
 * {
@@ -124,10 +125,26 @@ li {
 .heroText {
   text-align: center;
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: x-large;
+}
+
+.heroEnter {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  border: 5px solid white;
+  background: rgba(0,0,0,0.25);
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+.heroEnter:hover {
+  color: black;
+  background: rgba(255, 255, 255, 0.1);
+  border: 5px solid #1B2636;
 }
 
 /****** MEDIA QUERIES ******/

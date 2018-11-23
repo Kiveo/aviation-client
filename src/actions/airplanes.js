@@ -1,4 +1,4 @@
-import { resetAirplaneForm, setRequestFlagColor } from './airplaneForm';
+import { resetAirplaneForm } from './airplaneForm';
 
 const API_URL = process.env.REACT_APP_API_URL
 
@@ -6,7 +6,7 @@ const API_URL = process.env.REACT_APP_API_URL
 const handleErrors = (response) => {
   if (!response.ok) {
     console.log("Error encountered with Response...")
-    setRequestFlagColor("orange")
+    // setRequestFlagColor("orange")
   }
   return response;
 }

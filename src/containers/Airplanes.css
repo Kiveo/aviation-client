@@ -68,7 +68,8 @@
 }
 
 .AirplaneLink:hover {
-  background-color: rgba(250,250,250,0.2);
+  background-color: rgba(50,150,150,0.6);
+  color: black;
 }
 
 

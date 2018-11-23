@@ -1,4 +1,4 @@
-import { resetAirplaneForm, setRequestFlagColor } from './airplaneForm';
+import { resetAirplaneForm } from './airplaneForm';
 
 const API_URL = process.env.REACT_APP_API_URL
 

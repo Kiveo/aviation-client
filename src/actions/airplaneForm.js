@@ -17,5 +17,5 @@ export const resetAirplaneForm = () => {
 //     type: 'SET_FLAG_COLOR',
 //     flag: color
 //   }
-}
+// }
 

@@ -12,10 +12,10 @@ export const resetAirplaneForm = () => {
   }
 }
 
-export const setRequestFlagColor = (color) => {
-  return {
-    type: 'SET_FLAG_COLOR',
-    flag: color
-  }
+// export const setRequestFlagColor = (color) => {
+//   return {
+//     type: 'SET_FLAG_COLOR',
+//     flag: color
+//   }
 }
 

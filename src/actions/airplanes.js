@@ -33,6 +33,13 @@ const removeAirplane = airplane => {
   }
 }
 
+const editAirplane = airplane => {
+  return {
+    type: 'EDIT_AIRPLANE',
+    airplane
+  }
+}
+
 // async actions
 export const getAirplanes = () => {
   return dispatch => {
@@ -76,5 +83,28 @@ export const deleteAirplane = (airplane) => {
     .then(dispatch(removeAirplane(airplane) )
     )
     .catch(error => console.log(error) )
+  }
+}
+
+export const updateAirplane = (airplane) => {
+  let airplane_id = airplane.id
+  return dispatch => {
+    return fetch(`${API_URL}airplanes/${airplane_id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // API uses strong parameters airplane: airplaneParams expected
+      body: JSON.stringify({airplane: airplane})
+    })
+    .then(response => response.json() )
+    .then(airplane => {
+      dispatch(editAirplane(airplane))
+      dispatch(resetAirplaneForm() ) 
+      dispatch(getAirplanes() )
+    })
+    .catch(error => {
+      console.log(error)
+    } )
   }
 }

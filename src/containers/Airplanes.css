@@ -53,6 +53,10 @@
   border-radius: 10px;
 }
 
+.AirplaneDelete:hover {
+  background-color: red;
+}
+
 .AirplaneLink, .AirplaneLink:visited {
   width: 100%;
   padding: 1em 0;
@@ -65,6 +69,32 @@
 
 .AirplaneLink:hover {
   background-color: rgba(250,250,250,0.2);
+}
+
+
+.AirplaneError {
+  background: palevioletred;
+}
+
+.AirplaneEditLink, .AirplaneEditLink:visited {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  background-color: darkslategrey;
+  color: black;
+  padding: 0.5em 1em;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  min-width: 100px;
+  margin: 1em auto;
+  max-width: 30%;
+  border-radius: 10px;
+}
+
+.AirplaneEditLink:hover {
+  color: white;
+  background: #a70;
+  /* background-color: rgba(0,0,0,0.7); */
 }
 
 .Empty {

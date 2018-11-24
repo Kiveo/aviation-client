@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import connect from 'react-redux/lib/connect/connect';
-import { getAirplanes, deleteAirplane } from '../actions/airplanes';
+// import AirplaneForm from './AirplaneForm';
 import AirplaneCard from '../components/AirplaneCard';
+import connect from 'react-redux/lib/connect/connect';
+import { getAirplanes } from '../actions/airplanes';
+import AirplaneEditForm from './AirplaneEditForm';
 
-class Airplane extends Component {
+class AirplaneEdit extends Component {
   componentDidMount() {
     this.props.getAirplanes();
+  }
+
+  componentDidUpdate() {
   }
   
   render() {
@@ -14,7 +19,13 @@ class Airplane extends Component {
     const conditionalRender = () => {
       if (airplane) {
         // return card after props mount (async is post initial component mount)
-        return <AirplaneCard airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane} showButtons="true"/>
+        return (
+          <React.Fragment>
+            <AirplaneCard showButtons={"false"} airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane}/>
+            {/* pass in current airplane to form, as prop */}
+            <AirplaneEditForm airplane={airplane} />
+          </React.Fragment>
+        )
       } else {
         return (<div className="AirplaneCard"><p>Sorry, that aircraft was not found.</p></div>)
       }
@@ -22,7 +33,7 @@ class Airplane extends Component {
 
     return(
       <div className="AirplanesContainer">
-        <h1>Aircraft Display: Aircraft {airplane_id}</h1>
+        <h1>Aircraft Edit: Aircraft {airplane_id}</h1>
         <div className="AirplanesFlexBox">
           {conditionalRender()}
         </div>
@@ -40,9 +51,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    deleteAirplane: (airplane) => {dispatch(deleteAirplane(airplane) )},
+    // deleteAirplane: (airplane) => {dispatch(deleteAirplane(airplane) )},
     getAirplanes: () => {dispatch(getAirplanes() )}
   })
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Airplane);
+export default connect(mapStateToProps, mapDispatchToProps)(AirplaneEdit);

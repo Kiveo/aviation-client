@@ -18,8 +18,6 @@ class Airplanes extends Component {
         <h1>Airplane Listings</h1>
         <div className="AirplanesFlexBox">
           {this.props.airplanes.map(airplane => <AirplaneCard airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane} showButtons={"true"}/> )}
-          {/* ensure left flex alignment  */}
-          <div className="AirplaneCard Empty"></div> <div className="AirplaneCard Empty"></div>
         </div>
       </div>
     )
@@ -39,4 +37,5 @@ const mapDispatchToProps = dispatch => {
   })
 }
 
+// concat?
 export default connect(mapStateToProps, mapDispatchToProps)(Airplanes);

@@ -85,28 +85,25 @@ li {
 }
 
 /* *************NAVIGATION*************** */
-.NavBar {
-  z-index: 2;
-  font-size: 1.5em;
+.navBar {
+  overflow: hidden;
   background-color: #123;
-  width: 100%;
-  min-height: 1.5em;
-  top: 0;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-.NavBar a, a:visited {
-  min-width: 150px;
-  flex: 1;
-  margin: auto;
-  color: white;
+.navBar a, a:visited {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
   text-decoration: none;
-  margin: 0 1em;
-  padding: 0.1em;
+  font-size: 1.5em;
+}
+
+.navBar .icon {
+  display: none;
 }
 
 /* ***HOME ELEMENTS*** */

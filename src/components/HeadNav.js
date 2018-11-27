@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 export const HeadNav = () => {
   let handleResponsive = () => {
-    console.log("clicked the button");
     let navbar = document.getElementById("navBar");
     if (navbar.className === "navBar") {
       navbar.className += " responsive";

@@ -46,14 +46,26 @@ const deactivateLoader = () => {
   }
 }
 
+const activateLoader = () => {
+  return {
+    type: 'ACTIVATE_LOADER'
+  }
+}
+
 // async actions
+export const initializeLoader = () => {
+  return dispatch => {
+    dispatch(activateLoader() )
+  }
+}
+
 export const getAirplanes = () => {
   return dispatch => {
     return fetch(`${API_URL}/airplanes`)
     .then(response => response.json() )
     .then(airplanes => dispatch(setAirplanes(airplanes) ) )
     .then(dispatch(deactivateLoader()) )
-    .catch(error => console.log(error));
+    .catch(error => dispatch(activateLoader()) );
   }
 }
 

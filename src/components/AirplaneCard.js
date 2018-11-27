@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import defaultplane from '../images/defaultplane.png';
 
 const AirplaneCard = (props) => (
   <div className="AirplaneCard">
@@ -9,7 +10,7 @@ const AirplaneCard = (props) => (
     }
     
     <p>Seats: {props.airplane.seats}</p>
-    <img className="AirplaneImg" src={props.airplane.img_url} alt={'Image of ' + props.airplane.name}/>
+    <img className="AirplaneImg" src={props.airplane.img_url ? props.airplane.img_url : defaultplane} alt={'aircraft reference'}/>
     <p>FAA Identifier: {props.airplane.identifier}</p>
     <p>Hourly Rate: ${props.airplane.lesson_rate}</p>
     

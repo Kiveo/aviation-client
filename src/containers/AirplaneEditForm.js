@@ -9,11 +9,12 @@ class AirplaneEditForm extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault();
     let updatedAirplane = {};
-    updatedAirplane.name = event.target.name.value;
-    updatedAirplane.seats = event.target.seats.value;
-    updatedAirplane.img_url = event.target.img_url.value;
-    updatedAirplane.lesson_rate = event.target.lesson_rate.value;
-    updatedAirplane.identifier = event.target.identifier.value;
+    let { name, seats, img_url, lesson_rate, identifier } = event.target
+    updatedAirplane.name = name.value;
+    updatedAirplane.seats = seats.value;
+    updatedAirplane.img_url = img_url.value;
+    updatedAirplane.lesson_rate = lesson_rate.value;
+    updatedAirplane.identifier = identifier.value;
 
     updatedAirplane.id = this.props.airplane.id
     this.props.updateAirplane(updatedAirplane);

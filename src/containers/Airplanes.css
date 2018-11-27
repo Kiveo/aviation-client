@@ -71,6 +71,7 @@
 .AirplaneLink:hover {
   background-color: rgba(50,150,150,0.6);
   color: black;
+  transition: 0.7s;
 }
 
 
@@ -96,7 +97,7 @@
 .AirplaneEditLink:hover {
   color: white;
   background: #a70;
-  /* background-color: rgba(0,0,0,0.7); */
+  transition: 0.7s;
 }
 
 .Empty {

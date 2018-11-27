@@ -9,8 +9,8 @@ export const HeadNav = () => {
     <header>
       <div className="navBar">
         {/* hamburger unicode: &#9776; */}
-        <button className="icon" onClick={handleResponsive}>&#9776;</button>
-        <NavLink to="/">AvClient</NavLink>
+        <button className="navIcon" onClick={handleResponsive}>&#9776;</button>
+        <NavLink to="/" className="navLogo">&#9992;</NavLink>
         <NavLink to="/airplanes"
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}        
         >Airplanes</NavLink>
@@ -19,7 +19,7 @@ export const HeadNav = () => {
         >About</NavLink>
         <NavLink to="/new" 
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
-        >Add To Listings</NavLink>
+        >Add To Listings </NavLink>
       </div>
     </header>
   );

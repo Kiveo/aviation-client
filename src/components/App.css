@@ -99,15 +99,21 @@ li {
   text-align: center;
   padding: 15px;
   text-decoration: none;
+  text-align: center;
   font-size: 1.5em;
 }
 
-.navBar .icon {
+.navIcon {
   display: none;
   color: white;
   background: #123;
   border: none;
   font-size: 1.5em;
+  padding: 15px;
+}
+
+.navLogo {
+  float: right;
 }
 
 /* ***HOME ELEMENTS*** */
@@ -148,20 +154,19 @@ li {
 
 /****** MEDIA QUERIES ******/
 
-@media only screen and (max-width: 900px) and (orientation: portrait) {
-  body {
-      /* background-color: lightblue; */
+@media only screen and (max-width: 600px) {
+  .navBar a {
+    display: none;
   }
-  .NavBar {
-    /* min-height: 5em; */
+  .navIcon {
+    display: block;
+    width: 100%;
+    /* float: left; */
   }
-  .NavBar a {
-    /* min-width: 250px; */
-  }
-  .App {
-    /* margin-top: 5.5em; */
-  }
-  .heroImage {
-    /* margin-top: -10vh; */
+  /* responsive class added via javascript/click event */
+  .navBar .responsive a {
+    display: block;
+    width: 100%;
+    background-color: #1f2f3f;
   }
 }

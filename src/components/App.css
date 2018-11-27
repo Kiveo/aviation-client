@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  padding: 10px 0;
+  position: relative;
 }
 
 H1, h2 {
@@ -72,7 +72,6 @@ li {
 .App-content {
   background-color: whitesmoke;
   min-height: 50vh;
-  /* padding-bottom: 5em; */
 }
 
 .App-footer {
@@ -85,41 +84,46 @@ li {
 }
 
 /* *************NAVIGATION*************** */
-.NavBar {
-  z-index: 2;
-  font-size: 1.5em;
-  background-color: #123;
-  width: 100%;
-  min-height: 1.5em;
-  top: 0;
-  position: fixed;
+.navBar {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  background-color: #123;
+  padding: 0;
+  margin: 0;
 }
 
-.NavBar a, a:visited {
-  min-width: 150px;
+.navBar a, a:visited {
   flex: 1;
-  margin: auto;
-  color: white;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
   text-decoration: none;
-  margin: 0 1em;
-  padding: 0.1em;
+  text-align: center;
+  font-size: 1.5em;
 }
 
+.navIcon {
+  display: none;
+  color: white;
+  background: #123;
+  border: none;
+  font-size: 1.5em;
+  padding: 15px;
+}
+
+.navBar .navLogo {
+  max-width: 5%;
+}
 /* ***HOME ELEMENTS*** */
 
 .heroImage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wing.jpg");
-  /* margin-top: -10vh; */
-  /* z-index: 0; */
-  height: 90vh;
+  z-index: 0;
+  height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .heroText {
@@ -147,20 +151,49 @@ li {
 
 /****** MEDIA QUERIES ******/
 
-@media only screen and (max-width: 900px) and (orientation: portrait) {
-  body {
-      background-color: lightblue;
+@media only screen and (max-width: 600px) {
+  .navBar {
+    width: 100%;
+    display: block;
   }
-  .NavBar {
-    min-height: 5em;
+  
+  .navBar a {
+    display: none;
   }
-  .NavBar a {
-    min-width: 250px;
+  
+  .navIcon {
+    display: block;
+    width: 100%;
   }
-  .App {
-    margin-top: 5.5em;
+
+  /* responsive class added via javascript/click event */
+  .navBar.responsive {
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    overflow-x: hidden;
   }
+
+  #navLogo {
+    max-width: 100%;
+  }
+  
+  .navBar.responsive a {
+    display: block;
+    text-align: justify;
+    padding: 15px 20px;
+    width: 100%;
+    background-color: #1f2f3f;
+    border-bottom: 5px solid #123;
+  }
+}
+
+/* Landscape specific media queries */
+@media only screen and (max-width: 850px) and (orientation: landscape) {
   .heroImage {
-    margin-top: -10vh;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
 }

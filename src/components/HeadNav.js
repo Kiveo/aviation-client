@@ -4,19 +4,19 @@ import { NavLink } from 'react-router-dom';
 export const HeadNav = () => {
   let handleResponsive = () => {
     console.log("clicked the button");
-    let icon = document.getElementById("navIcon");
-    if (icon.className === "navIcon") {
-      icon.className += " responsive";
+    let navbar = document.getElementById("navBar");
+    if (navbar.className === "navBar") {
+      navbar.className += " responsive";
     } else {
-      icon.className = "navIcon";
+      navbar.className = "navBar";
     }
   }
 
   return (
     <header>
-      <div className="navBar">
+      <div className="navBar" id="navBar">
         {/* hamburger unicode: &#9776; */}
-        <button className="navIcon" id="navIcon" onClick={handleResponsive}>&#9776;</button>
+        <button className="navIcon" onClick={handleResponsive}>&#9776;</button>
         {/* airplane unicode: &#9992; */}
         <NavLink to="/" className="navLogo">&#9992;</NavLink>
         <NavLink to="/airplanes"

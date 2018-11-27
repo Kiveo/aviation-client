@@ -11,7 +11,6 @@ import loader from '../images/loader.gif';
 class Airplanes extends Component {
 
   componentDidMount() {
-    console.log(this.props.loader.loading)
     this.props.getAirplanes()
   }
 

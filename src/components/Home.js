@@ -3,14 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
   return (
-    <div className="App">
-
-      <div className="heroImage">
-        <span className="heroText">
-          <h1>Welcome to Aviation Client</h1>
-          <p><NavLink to="/airplanes" className="heroEnter">Enter</NavLink></p>
-        </span>
-      </div>
+    <div className="heroImage">
+      <span className="heroText">
+        <h1>Welcome to Aviation Client</h1>
+        <p><NavLink to="/airplanes" className="heroEnter">Enter</NavLink></p>
+      </span>
     </div>
   )
 }

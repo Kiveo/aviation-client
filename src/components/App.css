@@ -14,7 +14,6 @@ body {
 
 header {
   position: relative;
-  /* padding: 10px 0; */
 }
 
 H1, h2 {
@@ -73,7 +72,6 @@ li {
 .App-content {
   background-color: whitesmoke;
   min-height: 50vh;
-  /* padding-bottom: 5em; */
 }
 
 .App-footer {
@@ -89,7 +87,6 @@ li {
 .navBar {
   display: flex;
   justify-content: center;
-  /* overflow: hidden; */
   background-color: #123;
   padding: 0;
   margin: 0;
@@ -97,7 +94,6 @@ li {
 
 .navBar a, a:visited {
   flex: 1;
-  /* float: left; */
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -123,13 +119,11 @@ li {
 
 .heroImage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wing.jpg");
-  /* margin-top: -10vh; */
-  /* z-index: 0; */
-  height: 90vh;
+  z-index: 0;
+  height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .heroText {
@@ -191,5 +185,15 @@ li {
     width: 100%;
     background-color: #1f2f3f;
     border-bottom: 5px solid #123;
+  }
+}
+
+/* Landscape specific media queries */
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  .heroImage {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
 }

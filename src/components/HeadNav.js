@@ -2,10 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const HeadNav = () => {
+  let handleResponsive = () => {
+    console.log("clicked the link");
+  }
   return (
     <header>
       <div className="navBar">
-        <NavLink to="/">Home</NavLink>
+        {/* hamburger unicode: &#9776; */}
+        <button className="icon" onClick={handleResponsive}>&#9776;</button>
+        <NavLink to="/">AvClient</NavLink>
         <NavLink to="/airplanes"
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}        
         >Airplanes</NavLink>

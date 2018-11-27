@@ -104,6 +104,10 @@ li {
 
 .navBar .icon {
   display: none;
+  color: white;
+  background: #123;
+  border: none;
+  font-size: 1.5em;
 }
 
 /* ***HOME ELEMENTS*** */

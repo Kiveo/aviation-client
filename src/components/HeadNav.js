@@ -18,15 +18,18 @@ export const HeadNav = () => {
         {/* hamburger unicode: &#9776; */}
         <button className="navIcon" onClick={handleResponsive}>&#9776;</button>
         {/* airplane unicode: &#9992; */}
-        <NavLink to="/" className="navLogo">&#9992;</NavLink>
+        <NavLink to="/" className="navLogo" onClick={handleResponsive}>&#9992;</NavLink>
         <NavLink to="/airplanes"
-          activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}        
+          activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
+          onClick={handleResponsive}        
         >Airplanes</NavLink>
         <NavLink to="/about"
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
+          onClick={handleResponsive}
         >About</NavLink>
         <NavLink to="/new" 
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
+          onClick={handleResponsive}
         >Add To Listings </NavLink>
       </div>
     </header>

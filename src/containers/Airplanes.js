@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import AirplaneCard from '../components/AirplaneCard';
 import { getAirplanes, deleteAirplane } from '../actions/airplanes';
+// import { getAirplanes, deleteAirplane, initializeLoader } from '../actions/airplanes';
 
 import './Airplanes.css';
 import loader from '../images/loader.gif';
@@ -10,6 +11,7 @@ import loader from '../images/loader.gif';
 class Airplanes extends Component {
 
   componentDidMount() {
+    console.log(this.props.loader.loading)
     this.props.getAirplanes()
   }
 
@@ -39,7 +41,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return ({
     deleteAirplane: (airplane) => {dispatch(deleteAirplane(airplane) )},
-    getAirplanes: () => {dispatch(getAirplanes() )}
+    getAirplanes: () => {dispatch(getAirplanes() )},
+    // initializeLoader: () => {dispatch(initializeLoader() )}
   })
 }
 

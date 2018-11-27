@@ -87,14 +87,17 @@ li {
 
 /* *************NAVIGATION*************** */
 .navBar {
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* overflow: hidden; */
   background-color: #123;
   padding: 0;
   margin: 0;
 }
 
 .navBar a, a:visited {
-  float: left;
+  flex: 1;
+  /* float: left; */
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -113,6 +116,9 @@ li {
   padding: 15px;
 }
 
+.navBar .navLogo {
+  max-width: 5%;
+}
 /* ***HOME ELEMENTS*** */
 
 .heroImage {
@@ -152,6 +158,11 @@ li {
 /****** MEDIA QUERIES ******/
 
 @media only screen and (max-width: 600px) {
+  .navBar {
+    width: 100%;
+    display: block;
+  }
+  
   .navBar a {
     display: none;
   }
@@ -168,6 +179,11 @@ li {
     z-index: 1;
     overflow-x: hidden;
   }
+
+  #navLogo {
+    max-width: 100%;
+  }
+  
   .navBar.responsive a {
     display: block;
     text-align: justify;

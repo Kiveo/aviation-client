@@ -23,14 +23,14 @@ export const HeadNav = () => {
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
           onClick={handleResponsive}        
         >Airplanes</NavLink>
-        <NavLink to="/about"
-          activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
-          onClick={handleResponsive}
-        >About</NavLink>
         <NavLink to="/new" 
           activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
           onClick={handleResponsive}
         >Add To Listings </NavLink>
+        <NavLink to="/about"
+          activeStyle={{borderRadius: 10, background: 'rgba(250,250,250,0.2)'}}
+          onClick={handleResponsive}
+        >About</NavLink>
       </div>
     </header>
   );

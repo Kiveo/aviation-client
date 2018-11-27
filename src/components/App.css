@@ -43,6 +43,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-bottom: 1em;
 }
 
 .listCard {
@@ -101,6 +102,12 @@ li {
   text-decoration: none;
   text-align: center;
   font-size: 1.5em;
+}
+
+.navBar a:hover {
+  color: black;
+  background-color: #7AB0B7;
+  transition: 0.7s;
 }
 
 .navIcon {

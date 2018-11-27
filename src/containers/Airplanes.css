@@ -46,7 +46,6 @@
 .AirplaneDelete {
   font-weight: bold;
   background-color: darkslategrey;
-  /* font-size: 1em; */
   padding: 0.5em 1em;
   letter-spacing: 0.1em;
   font-size: 1em;
@@ -56,6 +55,7 @@
 
 .AirplaneDelete:hover {
   background-color: red;
+  transition: 0.7s;
 }
 
 .AirplaneLink, .AirplaneLink:visited {

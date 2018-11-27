@@ -16,7 +16,7 @@ class Airplane extends Component {
         // return card after props mount (async is post initial component mount)
         return <AirplaneCard airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane} showButtons="true"/>
       } else {
-        return (<div className="AirplaneCard"><p>Sorry, that aircraft was not found.</p></div>)
+        return (<div className="AirplaneCard"><p>This aircraft is not listed.</p></div>)
       }
     }
 

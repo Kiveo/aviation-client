@@ -17,7 +17,7 @@ const AirplaneCard = (props) => (
       <Link to={"/airplanes/" + props.airplane.id + "/edit"} className="AirplaneEditLink"><h3>Edit</h3></Link> : null
     }
     {props.showButtons === "true" ?
-      <button className="AirplaneDelete" onClick={() => props.delete(props.airplane)}>Remove</button>
+      <button className="AirplaneDelete" onClick={() => (window.confirm('Permanently remove this listing?')) && props.delete(props.airplane)}>Remove</button>
     :null }
   </div>
 );

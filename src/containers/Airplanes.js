@@ -15,6 +15,8 @@ class Airplanes extends Component {
   render() {
     return(
       <div className="AirplanesContainer">
+        {console.log(this.props)}
+        {console.log(this.props.loader)}
         <h1>Airplane Listings</h1>
         <div className="AirplanesFlexBox">
           {this.props.airplanes.map(airplane => <AirplaneCard airplane={airplane} key={airplane.id} delete={this.props.deleteAirplane} showButtons={"true"}/> )}
@@ -28,7 +30,8 @@ class Airplanes extends Component {
 
 const mapStateToProps = (state) => {
   return({
-    airplanes: state.airplanes
+    airplanes: state.airplanes,
+    loader: state.loader 
   })
 }
 

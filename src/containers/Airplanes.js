@@ -16,7 +16,6 @@ class Airplanes extends Component {
   render() {
     return(
       <div className="AirplanesContainer">
-        {console.log(this.props.loader)}
         <h1>Airplane Listings</h1>
         {(this.props.loader.loading === 'true') ? <img alt="loading..." src={loader}></img> : null}
         {(this.props.loader.loading === 'true') ? <p>This server sleeps while inactive<br /> Please allow a moment for it to awaken</p> : null}

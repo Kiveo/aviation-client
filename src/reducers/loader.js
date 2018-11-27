@@ -9,7 +9,7 @@ const loader = (state = initialState, action) => {
     return initialState;
 
     case 'DEACTIVATE_LOADER':
-      return {...state, loader: false};
+      return {...state, loading: false};
 
     default: 
       return state; 

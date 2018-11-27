@@ -40,12 +40,19 @@ const editAirplane = airplane => {
   }
 }
 
+const deactivateLoader = () => {
+  return {
+    type: 'DEACTIVATE_LOADER',
+  }
+}
+
 // async actions
 export const getAirplanes = () => {
   return dispatch => {
     return fetch(`${API_URL}/airplanes`)
     .then(response => response.json() )
     .then(airplanes => dispatch(setAirplanes(airplanes) ) )
+    .then(dispatch(deactivateLoader()) )
     .catch(error => console.log(error));
   }
 }

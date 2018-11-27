@@ -3,11 +3,13 @@ import thunk from 'redux-thunk';
 
 import airplanes from './reducers/airplanes';
 import airplaneFormData from './reducers/airplaneFormData';
+import loader from './reducers/loader';
 
 // utlize combine reducers && middleware for async
 const reducers = combineReducers({
   airplanes: airplanes,
-  airplaneFormData
+  airplaneFormData,
+  loader 
 });
 
 const middleware = [thunk]

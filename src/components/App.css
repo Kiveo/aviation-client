@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 
 H1, h2 {
@@ -150,18 +150,18 @@ li {
 
 @media only screen and (max-width: 900px) and (orientation: portrait) {
   body {
-      background-color: lightblue;
+      /* background-color: lightblue; */
   }
   .NavBar {
-    min-height: 5em;
+    /* min-height: 5em; */
   }
   .NavBar a {
-    min-width: 250px;
+    /* min-width: 250px; */
   }
   .App {
-    margin-top: 5.5em;
+    /* margin-top: 5.5em; */
   }
   .heroImage {
-    margin-top: -10vh;
+    /* margin-top: -10vh; */
   }
 }

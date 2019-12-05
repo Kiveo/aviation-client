@@ -10,7 +10,7 @@ const AirplaneCard = (props) => (
     }
     
     <p>Seats: {props.airplane.seats}</p>
-    <img className="AirplaneImg" src={props.airplane.img_url ? props.airplane.img_url : defaultplane} alt={'leave url blank for default image'}/>
+    <img className="AirplaneImg" src={props.airplane.img_url ? props.airplane.img_url : defaultplane} alt={'leave url blank for default img'}/>
     <p>FAA Identifier: {props.airplane.identifier}</p>
     <p>Hourly Rate: ${props.airplane.lesson_rate}</p>
     
